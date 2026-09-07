@@ -10,6 +10,8 @@ load_dotenv()
 intents = discord.Intents.default()
 intents.message_content = True  # Privileged intent must be enabled in Developer Portal
 
+tree = discord.app_commands.CommandTree(client)
+
 client = discord.Client(intents=intents)
 weather_api_key = os.environ["WEATHER_API_KEY"]
 discord_api_key = os.environ["DISCORD_TOKEN"]
